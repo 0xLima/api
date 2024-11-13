@@ -38,6 +38,7 @@ wsgi = WSGILogger(app, [StreamHandler(sys.stdout)], ApacheFormatter())
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT') or 8080)
+    app.run(host="0.0.0.0", port=8080)
     LOGGER.info('Starting on port %s ...', port)
 
     import bjoern
