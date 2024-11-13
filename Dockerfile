@@ -9,6 +9,6 @@ COPY ./ /app
 
 RUN pip install -e .
 
-EXPOSE 3000
+EXPOSE 8080:8080
 
 CMD ["python", "-m", "app.app"]
